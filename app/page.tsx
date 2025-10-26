@@ -1,103 +1,369 @@
-import Image from "next/image";
+// // "use client";
+// // import { useState, useEffect, useRef } from "react";
+// // import Banner from "@/components/Banner";
+// // import Date from "@/components/Date";
+// // import Footer from "@/components/Footer";
+// // import Hero from "@/components/Hero";
+// // import Involved from "@/components/Involved";
+// // import Navbar from "@/components/Navbar";
+// // import { Whatsapp } from "@/components/whatsapp";
+
+// // export default function Home() {
+// //   const [open, setOpen] = useState(false);
+// //   const hasShown = useRef(false); 
+
+// //   useEffect(() => {
+// //     if (hasShown.current) return; 
+
+// //     const timer = setTimeout(() => {
+// //       setOpen(true);
+// //       hasShown.current = true; 
+// //     }, 6000);
+
+// //     return () => clearTimeout(timer);
+// //   }, []);
+// //   return (
+// //     <main className="flex flex-col overflow-hidden">
+// //       <Navbar />
+// //       <Hero />
+// //       <Date />
+// //       <Banner />
+// //       <Involved />
+// //       <Footer />
+// //       <Whatsapp open={open} setOpen={setOpen} />
+// //     </main>
+// //   );
+// // }
+
+
+
+// "use client";
+
+// import About from "@/components/About";
+// import Banner from "@/components/Banner";
+// import EventRoaster from "@/components/EventRoaster";
+// import Faqs from "@/components/Faqs";
+// import Footer from "@/components/Footer";
+// import Hero from "@/components/Hero";
+// import Involved from "@/components/Involved";
+// import Navbar from "@/components/Navbar";
+// import Partners from "@/components/Partners";
+// import Speakers from "@/components/Speakers";
+// import Theme from "@/components/Theme";
+// import Marque from "@/components/Marque";
+// import Timeline from "@/components/Timeline";
+// import { useState, useEffect, useRef } from "react";
+
+// export default function Home() {
+//   const [open, setOpen] = useState(false);
+//   const hasShown = useRef(false); 
+
+//   useEffect(() => {
+//     if (hasShown.current) return; 
+
+//     const timer = setTimeout(() => {
+//       setOpen(true);
+//       hasShown.current = true; 
+//     }, 1000);
+
+//     return () => clearTimeout(timer);
+//   }, []);
+  
+//   return (
+//     <main className="flex flex-col overflow-hidden">
+//       <Navbar />
+//       <Hero/>
+//       <Date/>
+//       <About/>
+//       <Marque/>
+//       <Involved/>
+//       <Theme/>
+//       <Timeline/>
+//       <Speakers/>
+//       <Banner/>
+//       <EventRoaster/>
+//       <Partners/>
+//       <Faqs/>
+      
+
+     
+//       {/* <Date/> */}
+//       <Footer/>
+      
+//     </main>
+//   );
+// }
+
+
+
+
+// "use client";
+
+// import About from "@/components/About";
+// import Banner from "@/components/Banner";
+// import Date from "@/components/Date";
+// import EventRoaster from "@/components/EventRoaster";
+// import Faqs from "@/components/Faqs";
+// import Footer from "@/components/Footer";
+// import Hero from "@/components/Hero";
+// import Involved from "@/components/Involved";
+// import Navbar from "@/components/Navbar";
+// import Partners from "@/components/Partners";
+// import Speakers from "@/components/Speakers";
+// import Theme from "@/components/Theme";
+// import Marque from "@/components/Marque";
+// import Timeline from "@/components/Timeline";
+// import { useState, useEffect, useRef } from "react";
+// import { Whatsapp } from "@/components/Whatsapp"; // Make sure the path is correct
+// import Form from "@/components/RegistrationForm";
+
+// export default function Home() {
+//   const [open, setOpen] = useState(false);
+//   const hasShown = useRef(false); 
+
+//   useEffect(() => {
+//     if (hasShown.current) return;
+
+//     const timer = setTimeout(() => {
+//       setOpen(true);       // Open the WhatsApp modal
+//       hasShown.current = true; 
+//     }, 3000); // 3 seconds
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   return (
+//     <main className="flex flex-col overflow-hidden">
+//       <Navbar />
+//       <Hero />
+//       {/* <Form/> */}
+//       <Date />
+//       <About />
+//       <Marque />
+//       <Involved />
+//       <Theme />
+//       <Timeline />
+//       <Speakers />
+//       <Banner />
+//       <EventRoaster />
+//       <Partners />
+//       <Faqs />
+//       <Footer />
+
+//       {/* WhatsApp Modal */}
+//       {/* <Whatsapp open={open} setOpen={setOpen} /> */}
+//     </main>
+//   );
+// }
+
+
+
+// "use client";
+
+// import About from "@/components/About";
+// import Banner from "@/components/Banner";
+// import Date from "@/components/Date";
+// import EventRoaster from "@/components/EventRoaster";
+// import Faqs from "@/components/Faqs";
+// import Footer from "@/components/Footer";
+// import Hero from "@/components/Hero";
+// import Involved from "@/components/Involved";
+// import Navbar from "@/components/Navbar";
+// import Partners from "@/components/Partners";
+// import Speakers from "@/components/Speakers";
+// import Theme from "@/components/Theme";
+// import Marque from "@/components/Marque";
+// import Timeline from "@/components/Timeline";
+// import { useState, useEffect, useRef } from "react";
+// import { Whatsapp } from "@/components/Whatsapp"; // Make sure the path is correct
+// import Modal from "@/components/RegistrationForm"; // Import the Modal component
+
+// export default function Home() {
+//   const [open, setOpen] = useState(false);
+//   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+//   const hasShown = useRef(false); 
+
+//   useEffect(() => {
+//     if (hasShown.current) return;
+
+//     const timer = setTimeout(() => {
+//       setOpen(true);       // Open the WhatsApp modal
+//       hasShown.current = true; 
+//     }, 3000); // 3 seconds
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   return (
+//     <main className="flex flex-col overflow-hidden relative">
+//       {/* Modal with blurred background */}
+//       {isModalOpen && (
+//         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
+//           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+//         </div>
+//       )}
+//       <Navbar />
+//       <Hero />
+//       <Date />
+//       <About />
+//       <Marque />
+//       <Involved />
+//       <Theme />
+//       <Timeline />
+//       <Speakers />
+//       <Banner />
+//       <EventRoaster />
+//       <Partners />
+//       <Faqs />
+//       <Footer />
+
+//       {/* WhatsApp Modal */}
+//       {/* <Whatsapp open={open} setOpen={setOpen} /> */}
+//     </main>
+//   );
+// }
+
+
+// -------------------------------------------------------------------------------
+// "use client";
+
+// import About from "@/components/About";
+// import Banner from "@/components/Banner";
+// import Date from "@/components/Date";
+// import EventRoaster from "@/components/EventRoaster";
+// import Faqs from "@/components/Faqs";
+// import Footer from "@/components/Footer";
+// import Hero from "@/components/Hero";
+// import Involved from "@/components/Involved";
+// import Navbar from "@/components/Navbar";
+// import Partners from "@/components/Partners";
+// import Speakers from "@/components/Speakers";
+// import Theme from "@/components/Theme";
+// import Marque from "@/components/Marque";
+// import Timeline from "@/components/Timeline";
+// import { useState, useEffect, useRef } from "react";
+// import { Whatsapp } from "@/components/Whatsapp";
+// import Modal from "@/components/RegistrationForm";
+
+// export default function Home() {
+//   const [open, setOpen] = useState(false);
+//   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+//   const hasShown = useRef(false);
+
+//   useEffect(() => {
+//     if (hasShown.current) return;
+
+//     const timer = setTimeout(() => {
+//       setOpen(true); // Open the WhatsApp modal
+//       hasShown.current = true;
+//     }, 3000); // 3 seconds
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   return (
+//     <main className="flex flex-col overflow-hidden relative">
+//       {/* Modal with blurred background */}
+//       {isModalOpen && (
+//         <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-end z-50">
+//           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+//         </div>
+//       )}
+//       <Navbar isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+//       <Hero />
+//       <Date />
+//       <About />
+//       <Marque />
+//       <Involved />
+//       <Theme />
+//       <Timeline />
+//       <Speakers />
+//       <Banner />
+//       <EventRoaster />
+//       <Partners />
+//       <Faqs />
+//       <Footer />
+//       {/* WhatsApp Modal */}
+//       {/* <Whatsapp open={open} setOpen={setOpen} /> */}
+//     </main>
+//   );
+// }
+
+
+
+"use client";
+
+import About from "@/components/About";
+import Banner from "@/components/Banner";
+import Date from "@/components/Date";
+import EventRoaster from "@/components/EventRoaster";
+import Faqs from "@/components/Faqs";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Involved from "@/components/Involved";
+import Navbar from "@/components/Navbar";
+import Partners from "@/components/Partners";
+import Speakers from "@/components/Speakers";
+import Theme from "@/components/Theme";
+import Marque from "@/components/Marque";
+import Timeline from "@/components/Timeline";
+import { useState, useEffect, useRef } from "react";
+import { Whatsapp } from "@/components/Whatsapp";
+import Modal from "@/components/RegistrationForm";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [open, setOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+  const hasShown = useRef(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Prevent background scrolling when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    // Cleanup on component unmount
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (hasShown.current) return;
+
+    const timer = setTimeout(() => {
+      setOpen(true); // Open the WhatsApp modal
+      hasShown.current = true;
+    }, 3000); // 3 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <main className="flex flex-col overflow-hidden relative">
+      {/* Modal with blurred background */}
+      {isModalOpen && (
+        <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-end z-50">
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      )}
+      <Navbar isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <Hero />
+      <Date />
+      <About />
+      <Marque />
+      <Involved />
+      <Theme />
+      <Timeline />
+      <Speakers />
+      <Banner />
+      <EventRoaster />
+      <Partners />
+      <Faqs />
+      <Footer />
+      {/* WhatsApp Modal */}
+      {/* <Whatsapp open={open} setOpen={setOpen} /> */}
+    </main>
   );
 }
